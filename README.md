@@ -18,7 +18,6 @@ Run:
 - or run outside of container by:
   - clone and create venv then activate venv `pip install -r requirements.txt`
   - then run `gunicorn project.wsgi:application --bind 0.0.0.0:8000 --workers 4` or `python manage.py runserver` for development server
-- superuser will be auto set based on .env variables
 
 Test:
 - While server is running  is running:
