@@ -9,7 +9,6 @@
 - Cookie stand API
     - built from template
     - hosting on elephantSQL
-- superuser login - user: 'dev', pass: 'dev'
 
 ### Setup
 
