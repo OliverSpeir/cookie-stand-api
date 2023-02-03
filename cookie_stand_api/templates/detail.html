@@ -20,25 +20,18 @@
                     name
                 </th>
                 <td class="px-6 py-4">
-                    {{ object.name }}
+                    {{ object.location }}
                 </td>
             </tr>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    added_by
+                    owner
                 </th>
                 <td class="px-6 py-4">
-                    {{ object.added_by }}
+                    {{ object.owner }}
                 </td>
             </tr>
-                <tr class="bg-white dark:bg-gray-800">
-                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    image_url
-                </th>
-                <td class="px-6 py-4">
-                    {{ object.image_url }}
-                </td>
-                    <tr class="bg-white dark:bg-gray-800">
+            <tr class="bg-white dark:bg-gray-800">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     description
                 </th>
@@ -46,6 +39,34 @@
                     {{ object.description }}
                 </td>
             </tr>
+            <tr class="bg-white dark:bg-gray-800">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Hourly Sales
+            </th>
+            <td class="px-6 py-4">
+                {{ object.hourly_sales }}
+            </td>
+            <tr class="bg-white dark:bg-gray-800">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Min Customers Per Hour
+            </th>
+            <td class="px-6 py-4">
+                {{ object.minimum_customers_per_hour }}
+            </td>
+            <tr class="bg-white dark:bg-gray-800">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Max Customers Per Hour
+            </th>
+            <td class="px-6 py-4">
+                {{ object.maximum_customers_per_hour }}
+            </td>
+            <tr class="bg-white dark:bg-gray-800">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                Average Cookies Per Sale
+            </th>
+            <td class="px-6 py-4">
+                {{ object.average_cookies_per_sale }}
+            </td>
         </tbody>
     </table>
 </div>

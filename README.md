@@ -6,11 +6,10 @@
 
 ### Description
 
-- Template for project that includes API app and Frontend app
-    - Features:
-      - JWT authorization for API
-      - Custom User Model 
-      - Login authentication for frontend
+- Cookie stand API
+    - built from template
+    - hosting on elephantSQL
+- superuser login - user: 'dev', pass: 'dev'
 
 ### Setup
 

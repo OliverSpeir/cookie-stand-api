@@ -1,35 +1,35 @@
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
 from django.urls import reverse_lazy
-from .models import Item
+from .models import CookieStand
 from .forms import CustomForm
 
 
-class ItemListView(ListView):
+class CookieStandListView(ListView):
     template_name = 'list.html'
-    model = Item
+    model = CookieStand
 
 
-class ItemDetailView(DetailView):
+class CookieStandDetailView(DetailView):
     template_name = 'detail.html'
-    model = Item
+    model = CookieStand
     fields = "__all__"
 
 
-class ItemCreateView(CreateView):
+class CookieStandCreateView(CreateView):
     template_name = 'create.html'
-    model = Item
+    model = CookieStand
     form_class = CustomForm
     success_url = reverse_lazy('list')
 
 
-class ItemUpdateView(UpdateView):
+class CookieStandUpdateView(UpdateView):
     template_name = 'update.html'
     form_class = CustomForm
-    model = Item
+    model = CookieStand
     success_url = reverse_lazy('list')
 
 
-class ItemDeleteView(DeleteView):
+class CookieStandDeleteView(DeleteView):
     template_name = 'delete.html'
-    model = Item
+    model = CookieStand
     success_url = reverse_lazy('list')

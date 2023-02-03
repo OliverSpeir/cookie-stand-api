@@ -10,11 +10,14 @@
     <ul>
         {% for object in object_list %}
             <div class="flex flex-col items-center bg-gray-100 max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-full w-96 h-96 mb-6" src="{{ object.image_url }}" alt="" />
                     <div class="p-5 mb-6">
                     <div class="mb-6">
-                            <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ object.name }}</h5>
+                            <h5 class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ object.location }}</h5>
                         <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400"> {{ object.description }}</p>
+                        <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400"> {{ object.hourly_sales }}</p>
+                        <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400"> {{ object.minimum_customers_per_hour }}</p>
+                        <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400"> {{ object.maximum_customers_per_hour }}</p>
+                        <p class="text-center mb-3 font-normal text-gray-700 dark:text-gray-400"> {{ object.average_cookies_per_sale }}</p>
                     </div>
                         <a href="{% url 'detail' object.pk %}" class="text-white bg-blue-700 hover:bg-blue-800
                                                                         focus:ring-4 focus:ring-blue-300 font-medium
