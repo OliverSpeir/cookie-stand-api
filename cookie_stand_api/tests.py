@@ -40,7 +40,7 @@ class ItemTests(APITestCase):
         )
 
     def test_get_item_list(self):
-        url = reverse("list")
+        url = reverse("list_api")
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         items = response.data
@@ -48,14 +48,14 @@ class ItemTests(APITestCase):
         self.assertEqual(items[0]["location"], "somewhere")
 
     def test_get_item_by_id(self):
-        url = reverse("detail", args=(1,))
+        url = reverse("detail_api", args=(1,))
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         item = response.data
         self.assertEqual(item["location"], "somewhere")
 
     def test_create_item(self):
-        url = reverse("list")
+        url = reverse("list_api")
         data = {"owner": 1, "location": "somewhere else", "description": "another stand"}
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -64,7 +64,7 @@ class ItemTests(APITestCase):
         self.assertEqual(CookieStand.objects.get(id=2).location, "somewhere else")
 
     def test_update_item(self):
-        url = reverse("detail", args=(1,))
+        url = reverse("detail_api", args=(1,))
         data = {
             "location": "somewhere new",
             "description": "stand",
@@ -82,7 +82,7 @@ class ItemTests(APITestCase):
         self.assertEqual(item.description, data["description"])
 
     def test_delete_item(self):
-        url = reverse("detail", args=(1,))
+        url = reverse("detail_api", args=(1,))
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         items = CookieStand.objects.all()
@@ -91,6 +91,6 @@ class ItemTests(APITestCase):
     # added to template
     def test_authentication_required(self):
         self.client.logout()
-        url = reverse("list")
+        url = reverse("list_api")
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_401_FORBIDDEN)
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
