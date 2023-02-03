@@ -9,7 +9,6 @@
 - Cookie stand API
     - built from template
     - hosting on elephantSQL
-- superuser login - user: 'dev', pass: 'dev'
 
 ### Setup
 
@@ -19,12 +18,10 @@ Run:
 - or run outside of container by:
   - clone and create venv then activate venv `pip install -r requirements.txt`
   - then run `gunicorn project.wsgi:application --bind 0.0.0.0:8000 --workers 4` or `python manage.py runserver` for development server
-- superuser will be auto set based on .env variables
 
 Test:
 - While server is running  is running:
-- `curl -d '{"username":"dev", "password":"dev"}' -H 'Content-Type: application/json' -X POST http://127.0.0.1:8000/api/token/`
-- `docker-compose run web python manage.py test` if docker or `python manage.py test` if not
+- `curl -d '{"username":"dev", "password":"uncommon"}' -H 'Content-Type: application/json' -X POST http://127.0.0.1:8000/api/token/`
 ### Resources
 
 - [Django REST Framework](https://www.django-rest-framework.org/)
