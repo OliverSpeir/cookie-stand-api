@@ -23,7 +23,6 @@ Run:
 Test:
 - While server is running  is running:
 - `curl -d '{"username":"dev", "password":"uncommon"}' -H 'Content-Type: application/json' -X POST http://127.0.0.1:8000/api/token/`
-- `docker-compose run web python manage.py test` if docker or `python manage.py test` if not
 ### Resources
 
 - [Django REST Framework](https://www.django-rest-framework.org/)
