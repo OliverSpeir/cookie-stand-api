@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     # third party
     'rest_framework',
     'compressor',
+    "corsheaders",
 
     # local
     'accounts',
@@ -67,6 +68,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",  # added to template
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -190,3 +192,7 @@ COMPRESS_ROOT = BASE_DIR / 'static'  # for custom user model
 COMPRESS_ENABLED = True  # for tailwind
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)  # for tailwind static files
+
+
+CORS_ORIGIN_WHITELIST = tuple(env.list("ALLOWED_ORIGINS"))
+CORS_ALLOW_ALL_ORIGINS = env.bool("ALLOW_ALL_ORIGINS")
