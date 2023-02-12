@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt import views as jwt_views
 from django.views.generic.base import TemplateView
+from .views import MyTokenObtainPairView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -26,7 +27,8 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("api-auth/", include("rest_framework.urls")),  # added to template
-    path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),  # added to template
+    # path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),  # added to template
+    path("api/token/", MyTokenObtainPairView.as_view(),name="token_obtain_pair"),  # changes what is sent back 
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),  # added to template
 
 ]
