@@ -1,6 +1,11 @@
 # LAB - 34
 
-## Project: DRF API / Frontend Template
+## Project: Cookie Stand API
+
+- [api vercel](https://cookie-stand-api-eta.vercel.app/)
+- [front end vercel](https://cookie-stand-admin-livid.vercel.app/)
+- [elephantSQL URL](postgres://apwehluw:jBTxtLTbZENEXZhrY3NaOiBdwYs_P4YU@hansken.db.elephantsql.com/apwehluw)
+- [front end repo](https://github.com/OliverSpeir/cookie-stand-admin)
 
 ### Author: Oliver Speir
 
@@ -8,7 +13,7 @@
 
 - Cookie stand API
     - built from template
-    - hosting on elephantSQL
+    - can be connected to postgresql docker container, elephantSQL, or sqlite db built into django
 
 ### Setup
 
@@ -29,3 +34,4 @@ Test:
 - [postgresql](https://www.postgresql.org/)
 - [Green Unicorn (gunicorn)](https://gunicorn.org/)
 - [WhiteNoise](https://whitenoise.evans.io/en/latest/)
+- [elephantSQL](https://www.elephantsql.com/)
