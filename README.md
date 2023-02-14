@@ -2,9 +2,8 @@
 
 ## Project: Cookie Stand API
 
-- [api vercel](https://cookie-stand-api-eta.vercel.app/)
+- [api vercel](https://cookie-stand-api-eta.vercel.app/) (connected to elephantSQL)
 - [front end vercel](https://cookie-stand-admin-livid.vercel.app/)
-- [elephantSQL URL](postgres://apwehluw:jBTxtLTbZENEXZhrY3NaOiBdwYs_P4YU@hansken.db.elephantsql.com/apwehluw)
 - [front end repo](https://github.com/OliverSpeir/cookie-stand-admin)
 
 ### Author: Oliver Speir
